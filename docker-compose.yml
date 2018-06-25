@@ -2,14 +2,14 @@ version: '2'
 
 services:
     teamcity:
-        image: jetbrains/teamcity-server:10.0.1
+        image: jetbrains/teamcity-server:2018.1
         volumes:
             - d:/ProgramData/JetBrains/TeamCity:/data/teamcity_server/datadir
             - D:/TeamCity/logs:/opt/teamcity/logs
         ports:
             - 8111:8111
     teamcity-agent:
-        image: jetbrains/teamcity-agent:10.0.1
+        image: jetbrains/teamcity-agent:2018.1
         volumes:
             - D:/TeamCity/Agent:/data/teamcity_agent/conf
         environment:
